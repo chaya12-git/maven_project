@@ -9,7 +9,11 @@ import org.testng.annotations.Test;
 public class PatientModule {
 	@Test
 	public void createPatient() {
-		Reporter.log("createPatient", true);
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.fb.com");
+		
+		Reporter.log(driver.getTitle(), true);
+		driver.quit();
 	}
 	// public static void main(String[] args) {
 	// System.setProperty("webdriver.chrome.driver",
